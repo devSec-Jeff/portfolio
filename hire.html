@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire DevSec-Jeff | Project Proposal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="logo">
+            <h1>DevSec-Jeff</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="hire.html" class="hire-btn active">Hire Me</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://github.com/devSec-Jeff/" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/devSec_Jeff" target="_blank" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/pkorkor-geoffrey/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Project Proposal Form</h2>
+                <div class="proposal-form-container">
+                    <form id="proposalForm" class="proposal-form" action="submit_proposal.php" method="POST" enctype="multipart/form-data">
+                        <div class="form-section">
+                            <h3>Project Details</h3>
+                            <div class="form-group">
+                                <label for="projectName">Project Name *</label>
+                                <input type="text" id="projectName" name="projectName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectType">Project Type *</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="">Select Project Type</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-app">Mobile Application</option>
+                                    <option value="api-development">API Development</option>
+                                    <option value="security-audit">Security Audit</option>
+                                    <option value="penetration-testing">Penetration Testing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectDescription">Project Description *</label>
+                                <textarea id="projectDescription" name="projectDescription" rows="5" required 
+                                    placeholder="Please provide a detailed description of your project, including goals, features, and any specific requirements..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Timeline & Budget</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="startDate">Expected Start Date *</label>
+                                    <input type="date" id="startDate" name="startDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="endDate">Expected End Date *</label>
+                                    <input type="date" id="endDate" name="endDate" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="budgetType">Budget Type *</label>
+                                <select id="budgetType" name="budgetType" required>
+                                    <option value="">Select Budget Type</option>
+                                    <option value="fixed">Fixed Price</option>
+                                    <option value="hourly">Hourly Rate</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budgetAmount">Budget Amount (USD) *</label>
+                                <input type="number" id="budgetAmount" name="budgetAmount" min="0" step="0.01" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Contact Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="clientName">Your Name *</label>
+                                    <input type="text" id="clientName" name="clientName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientEmail">Email Address *</label>
+                                    <input type="email" id="clientEmail" name="clientEmail" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientPhone">Phone Number</label>
+                                <input type="tel" id="clientPhone" name="clientPhone">
+                            </div>
+                            <div class="form-group">
+                                <label for="clientCompany">Company Name</label>
+                                <input type="text" id="clientCompany" name="clientCompany">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Additional Documents</h3>
+                            <div class="form-group">
+                                <label for="projectFiles">Project Documents</label>
+                                <div class="file-upload">
+                                    <input type="file" id="projectFiles" name="projectFiles[]" multiple 
+                                        accept=".pdf,.doc,.docx,.txt,.md,.zip,.rar">
+                                    <div class="file-upload-info">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <p>Drag & drop files here or click to browse</p>
+                                        <p class="file-types">Accepted formats: PDF, DOC, DOCX, TXT, MD, ZIP, RAR</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            <div class="form-group">
+                                <label for="additionalInfo">Any other relevant information</label>
+                                <textarea id="additionalInfo" name="additionalInfo" rows="4" 
+                                    placeholder="Please provide any additional information that might be relevant to the project..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Submit Proposal
+                            </button>
+                            <button type="reset" class="btn btn-secondary">
+                                <i class="fas fa-redo"></i> Reset Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 DevSec-Jeff. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/devSec-Jeff/" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/devSec_Jeff" target="_blank" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/pkorkor-geoffrey/" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
